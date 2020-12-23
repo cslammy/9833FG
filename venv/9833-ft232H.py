@@ -84,10 +84,12 @@ freq0_loadupper16 = [lm1x,lm2x]
 
 cntrl_reset = [33,0]
 
+
 phase0 = [192,0]
 
-cntrl_write = [32,0]
-
+#cntrl_write = [32,0]  #sine
+#cntrl_write = [32,2]  #tri
+cntrl_write = [32,32]  #square
 send2_9833 = cntrl_reset + freq0_loadlower16 + freq0_loadupper16 + phase0 + cntrl_write
 
 print(send2_9833)
