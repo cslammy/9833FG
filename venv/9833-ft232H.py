@@ -3,6 +3,8 @@ from pyftdi.spi import SpiController
 
 ############user changes these###############
 user_freq = 1000
+wave = 3 #1--sine   2--pulse  3--tri
+##########################################
 
 #pinout from H232 for SPI
 '''
@@ -88,9 +90,19 @@ cntrl_reset = [33,0]
 phase0 = [192,0]
 
 #new waveforms here
-#cntrl_write = [32,0]  #sine
-#cntrl_write = [32,2]  #tri
-cntrl_write = [32,32]  #square
+
+cntrl_reset = [33,0]
+
+if wave == 3: # tri
+    cntrl_write = [32,2]  #tri
+    print("tri")
+if wave == 2:
+    cntrl_write = [32,32]  #square
+    print("square")
+if wave == 1:
+    cntrl_write = [32,0]  #sine
+    print("sin")
+
 send2_9833 = cntrl_reset + freq0_loadlower16 + freq0_loadupper16 + phase0 + cntrl_write
 
 print(send2_9833)
