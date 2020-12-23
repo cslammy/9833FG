@@ -87,6 +87,7 @@ cntrl_reset = [33,0]
 
 phase0 = [192,0]
 
+#new waveforms here
 #cntrl_write = [32,0]  #sine
 #cntrl_write = [32,2]  #tri
 cntrl_write = [32,32]  #square
