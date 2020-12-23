@@ -87,7 +87,7 @@ freq0_loadupper16 = [lm1x,lm2x]
 cntrl_reset = [33,0]
 
 
-phase0 = [192,0]
+phase0 = [207,0]
 
 #new waveforms here
 
